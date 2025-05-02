@@ -86,6 +86,7 @@ fun DragDropDemoMutualDynamicLazy(modifier: Modifier, initialItems: List<Int>) {
                 onTransfer = { source, target ->
                     // On drop, add the source box’s money to the target box.
                     amounts[target] = amounts[target] + amounts[source]
+                    amounts[source] = 0
                 },
                 boxBounds = boxBounds,
                 globalCandidateTargetIndex = candidateTargetIndex,
